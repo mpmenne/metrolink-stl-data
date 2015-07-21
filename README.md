@@ -10,7 +10,7 @@ http://www.gtfs-data-exchange.com/agency/metro-st-louis/
 
 The GTFS CSV data can easily be imported into a sqlite database and embedded in the application of your choice.
 
-If you are using the [NextMetro app](https://github.com/MoMenne/metrolink-stl-ios), the sqlite database is used to generate CSV files which are included in the app.
+If you are using the [NextMetro app](https://github.com/MoMenne/metrolink-stl-ios), CSV files are embedded instead of an actual sqlite database.
 
 To generate the sqlite database, run the command
 ```
