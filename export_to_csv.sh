@@ -15,6 +15,6 @@ do
         echo "$url_friendly"
         WEEKDAY_FILE_NAME="gen/$url_friendly-mf.csv"
         WEEKEND_FILE_NAME="gen/$url_friendly-ss.csv"
-        sqlite3 -csv  metrolink.db <<< "select * from metrolink_stops where stop_name=$col5 and service_id='1_merged_2038871';" | tee "$WEEKDAY_FILE_NAME" 
-        sqlite3 -csv  metrolink.db <<< "select * from metrolink_stops where stop_name=$col5 and service_id='2_merged_2038873';" | tee "$WEEKEND_FILE_NAME" 
+        sqlite3 -csv  metrolink.db <<< "select * from metrolink_stops where stop_name=$col5 and service_id='1_merged_2038871' order by arrival_time;" | tee "$WEEKDAY_FILE_NAME" 
+        sqlite3 -csv  metrolink.db <<< "select * from metrolink_stops where stop_name=$col5 and service_id='2_merged_2038873' order by arrival_time;" | tee "$WEEKEND_FILE_NAME" 
 done < gen/stations.csv
