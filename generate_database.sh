@@ -1,4 +1,4 @@
-if [ -a "metrolink.db" ]; then
+if [ -e "metrolink.db" ]; then
   echo "wiping the existing database"
   rm metrolink.db
 fi
