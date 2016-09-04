@@ -6,35 +6,32 @@ drop table if exists stop_times;
 drop view  if exists metrolink_stops;
 
 create table trips (
-	block_id char(40),
 	route_id char(40),
-	direction_id char(2),
-	trip_headsign char(20),
-	shape_id char(20),
 	service_id char(20),
 	trip_id char(20) PRIMARY KEY,
+	trip_headsign char(20),
+	direction_id char(2),
+	block_id char(40),
+	shape_id char(20),
 	FOREIGN KEY(route_id) references routes(route_id)
 );
 
 create table routes (
+	route_id char(40) PRIMARY KEY,
+	route_short_name char(40),
 	route_long_name char(200),
 	route_type char(40),
-    route_text_color char(40),
-	agency_id char(40),
-	route_id char(40) PRIMARY KEY,
 	route_color char(40),
-	route_short_name char(40)
+  route_text_color char(40)
 );
 
 create table stops (
-	stop_lat Decimal(9,6),
-	zone_id char(30),
-	stop_lon Decimal(9,6),
 	stop_id char(30) PRIMARY KEY,
-	stop_desc char(30),
+  stop_code char(30),
 	stop_name char(30),
-	location_type char(30),
-    stop_code char(30)
+	stop_desc char(30),
+	stop_lat Decimal(9,6),
+	stop_lon Decimal(9,6)
 );
 
 create table stop_times ( 
@@ -43,11 +40,9 @@ create table stop_times (
 	departure_time char(40), 
 	stop_id char(40), 
 	stop_sequence char(40), 
-	stop_headsign char(40), 
 	pickup_type char(40), 
 	drop_off_type char(40), 
 	shape_dist_traveled char(40),
-    timepoint numeric,
 	FOREIGN KEY(stop_id) references stops(stop_id),
 	FOREIGN KEY(trip_id) references trips(trip_id)
 );

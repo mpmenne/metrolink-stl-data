@@ -1,3 +1,5 @@
-service_id,date,exception_type
-1_merged_2164092,20160704,2
-3_merged_2164093,20160704,1
+﻿service_id,date,exception_type
+1,20160905,2
+3,20160905,1
+1,20161124,2
+3,20161124,1
