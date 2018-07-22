@@ -2,7 +2,7 @@
 
 All of the data is compiled from the GTFS (Google Transit Feed Specification) which is a nationwide format for aggregating transit data.
 
-The data contained in this repository was obtained by the GTFS exchange.  The last update to this repo was July 21st, 2015
+The data contained in this repository was obtained by the GTFS exchange.  The last update to this repo was July 18th, 2018
 
 http://www.metrostlouis.org/About/DeveloperResource.aspx
 
