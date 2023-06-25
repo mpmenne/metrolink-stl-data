@@ -2,7 +2,7 @@
 
 All of the data is compiled from the GTFS (Google Transit Feed Specification) which is a nationwide format for aggregating transit data.
 
-The data contained in this repository was obtained by the GTFS exchange.  The last update to this repo was July 18th, 2018
+The data contained in this repository was obtained by the GTFS exchange.  The last update to this repo was June 24th, 2023.
 
 http://www.metrostlouis.org/About/DeveloperResource.aspx
 
@@ -10,7 +10,7 @@ http://www.metrostlouis.org/About/DeveloperResource.aspx
 
 The GTFS CSV data can easily be imported into a sqlite database and embedded in the application of your choice.
 
-If you are using the [NextMetro app](https://github.com/MoMenne/metrolink-stl-ios), CSV files are embedded instead of an actual sqlite database.
+If you are using the [NextMetro app](https://github.com/mpmenne/metrolink-stl-ios), CSV files are embedded instead of an actual sqlite database.
 
 To generate the sqlite database, run the command
 ```
