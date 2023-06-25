@@ -19,7 +19,7 @@ do
         WEEKEND_FILE_NAME="gen/$url_friendly-ss.csv"
 
         # we want to exclude any arrivals to stations at the end of the line
-        END_OF_LINE_EXCLUSIONS="( NOT (stop_name like '%SHREWSBURY%' AND trip_headsign like '%SHREWSBURY%')) AND ( NOT (stop_name like '%EMERSON%' AND trip_headsign like '%EMERSON%')) AND ( NOT ( stop_name like '%CIVIC CENTER%' AND trip_headsign like '%CIVIC CENTER%')) AND ( NOT (stop_name like '%FAIRVIEW HEIGHTS%' AND trip_headsign like '%FAIRVIEW_HEIGHTS%')) AND ( NOT ( stop_name like '%GRAND%' AND trip_headsign like '%GRAND%')) AND ( NOT ( stop_name like '%SHILOH%' AND trip_headsign like '%SHILOH%')) AND ( NOT (stop_name like '%WASHINGTON PARK%' AND trip_headsign like '%WASHINGTON PARK%')) AND ( NOT ( stop_name like '%LAMBERT MAIN%' and trip_headsign like '%TERMINAL #1%'))" 
+        END_OF_LINE_EXCLUSIONS="( NOT (stop_name like '%SHREWSBURY%' AND trip_headsign like '%SHREWSBURY%')) AND ( NOT (stop_name like '%EMERSON%' AND trip_headsign like '%EMERSON%')) AND ( NOT ( stop_name like '%CIVIC CENTER%' AND trip_headsign like '%CIVIC CENTER%')) AND ( NOT (stop_name like '%FAIRVIEW HEIGHTS%' AND trip_headsign like '%FAIRVIEW_HEIGHTS%')) AND ( NOT ( stop_name like '%GRAND%' AND trip_headsign like '%GRAND%')) AND ( NOT ( stop_name like '%SHILOH%' AND trip_headsign like '%SHILOH%')) AND ( NOT (stop_name like '%WASHINGTON PARK%' AND trip_headsign like '%WASHINGTON PARK%')) AND ( NOT ( stop_name like '%TERMINAL #1%' and trip_headsign like '%TERMINAL #1%'))" 
 
         WEEKDAY_QUERY="select * from metrolink_stops where stop_name=$col5 and service_id='1' and $END_OF_LINE_EXCLUSIONS order by arrival_time;"
         echo $WEEKDAY_QUERY
